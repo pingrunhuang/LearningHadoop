@@ -1,0 +1,17 @@
+cat1, 12
+cat2, 13
+cat3, 14
+cat4, 15
+cat5, 16
+cat6, 10
+cat7, 100
+cat8, 200
+cat9, 300
+cat10, 1001
+cat11, 67
+cat12, 22
+cat13, 23
+cat14, 22
+cat15, 1000
+cat16, 1003
+cat17, 500

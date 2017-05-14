@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/LearningHadoop.iml" filepath="$PROJECT_DIR$/LearningHadoop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LeftOuterJoin/LeftOuterJoin.iml" filepath="$PROJECT_DIR$/LeftOuterJoin/LeftOuterJoin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OrderInversion/OrderInversion.iml" filepath="$PROJECT_DIR$/OrderInversion/OrderInversion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SecondarySort/SecondarySort.iml" filepath="$PROJECT_DIR$/SecondarySort/SecondarySort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TopN/TopN.iml" filepath="$PROJECT_DIR$/TopN/TopN.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Util/Util.iml" filepath="$PROJECT_DIR$/Util/Util.iml" />
+    </modules>
+  </component>
+</project>
