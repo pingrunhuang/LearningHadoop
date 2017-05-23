@@ -14,6 +14,8 @@
         <module>Util</module>
         <module>LeftOuterJoin</module>
         <module>OrderInversion</module>
+        <module>MovingAverage</module>
+        <module>MarketBasketAnalysis</module>
     </modules>
 
     <properties>

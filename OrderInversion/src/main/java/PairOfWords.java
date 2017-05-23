@@ -1,5 +1,3 @@
-package main.java;
-
 /*
 * This class is going to represent the key of the output of mapper
 * eg. (w[i],w[j])
@@ -13,7 +11,6 @@ import java.io.DataOutput;
 import java.io.IOException;
 
 public class PairOfWords implements WritableComparable<PairOfWords> {
-
     private String left;
     private String right;
 
@@ -35,7 +32,6 @@ public class PairOfWords implements WritableComparable<PairOfWords> {
     }
 
     // compare two pairOfWords according to the sequence from left to right
-    @Override
     public int compareTo(PairOfWords o) {
         String l = o.getLeft();
         String r = o.getRight();
@@ -62,13 +58,12 @@ public class PairOfWords implements WritableComparable<PairOfWords> {
         return left.hashCode() + right.hashCode();
     }
 
-    @Override
+
     public void write(DataOutput out) throws IOException {
         Text.writeString(out, left);
         Text.writeString(out, right);
     }
 
-    @Override
     public void readFields(DataInput in) throws IOException {
         left = Text.readString(in);
         right = Text.readString(in);
