@@ -1,4 +1,4 @@
-package MRImpl;
+package MRImpl.WithoutList;
 
 
 import org.apache.hadoop.conf.Configuration;
@@ -15,16 +15,16 @@ import org.apache.hadoop.util.ToolRunner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class CommonFriendDriver extends Configured implements Tool{
+public class CommonFriendsDriver extends Configured implements Tool{
 
-    private static final Logger logger = LoggerFactory.getLogger(CommonFriendDriver.class);
+    private static final Logger logger = LoggerFactory.getLogger(CommonFriendsDriver.class);
     public int run(String[] args) throws Exception {
         Configuration conf = new Configuration();
         Job job = Job.getInstance(conf);
-        job.setJobName("CommonFriendDriver");
+        job.setJobName("CommonFriendsDriver");
 
         job.setMapperClass(CommonFriendsMapper.class);
-        job.setCombinerClass(CommonFriendCombiner.class);
+        job.setCombinerClass(CommonFriendsCombiner.class);
         job.setReducerClass(CommonFriendsReducer.class);
 
 
@@ -54,7 +54,7 @@ public class CommonFriendDriver extends Configured implements Tool{
 
         logger.info("inputDir=" + args[0]);
         logger.info("outputDir=" + args[1]);
-        int jobStatus = ToolRunner.run(new CommonFriendDriver(),args);
+        int jobStatus = ToolRunner.run(new CommonFriendsDriver(),args);
         logger.info("jobStatus=" + jobStatus);
         System.exit(jobStatus);
     }

@@ -1,4 +1,4 @@
-package MRImpl;
+package MRImpl.WithoutList;
 
 
 import org.apache.hadoop.io.Text;
@@ -6,7 +6,17 @@ import org.apache.hadoop.mapreduce.Reducer;
 
 import java.io.IOException;
 
-public class CommonFriendCombiner extends Reducer<Text, Text, Text, Text>{
+/*
+* input:
+*   key:[user-id]
+*   value:[friend1 friend2 ...]
+* output:
+*   key:(user-id,friendi)
+*   value:([friend1 friend2 ...],[friend1 friend2 ...])
+* notice just 2 list in the output value
+* */
+
+public class CommonFriendsCombiner extends Reducer<Text, Text, Text, Text>{
     private static Text outputKey = new Text();
     private static Text outputValue = new Text();
 

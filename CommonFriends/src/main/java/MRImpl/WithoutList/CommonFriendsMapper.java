@@ -1,4 +1,4 @@
-package MRImpl;
+package MRImpl.WithoutList;
 
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
@@ -14,16 +14,16 @@ import java.io.IOException;
 * The output data format of mapper is [userID, friendID]
 * */
 public class CommonFriendsMapper extends Mapper<LongWritable, Text, Text, Text>{
-    private static final Logger loger = LoggerFactory.getLogger(CommonFriendsMapper.class);
+    private static final Logger logger = LoggerFactory.getLogger(CommonFriendsMapper.class);
 
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-        loger.info("Start Mapping...");
+        logger.info("Start Mapping...");
         String[] tokens = StringUtils.split(value.toString().trim(), '\t');
-        loger.info("user:" + tokens[0] + " - friend:" + tokens[1]);
+        logger.info("user:" + tokens[0] + " - friend:" + tokens[1]);
         Text userID = new Text(tokens[0]);
         Text friendID = new Text(tokens[1]);
         context.write(userID, friendID);
-        loger.info("Finished Mapping...");
+        logger.info("Finished Mapping...");
     }
 }

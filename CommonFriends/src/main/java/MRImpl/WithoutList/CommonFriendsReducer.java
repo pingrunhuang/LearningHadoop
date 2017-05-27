@@ -1,4 +1,4 @@
-package MRImpl;
+package MRImpl.WithoutList;
 
 
 import org.apache.hadoop.io.Text;
